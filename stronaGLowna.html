@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    
+  <link rel="stylesheet" href="css/style.css">
+    
+  <head>
+    <meta charset="utf-8">
+  
+   
+    <title>Zadanie rekrutacyjne</title>
+  </head>
+
+  <body>
+     <button  id="show_pop_up">Kliknij mnie</button>
+    
+     <div class="popup-container"  id="popup_container">
+          <div class="popup">
+            <div class="close">
+                <button id="close"><i class="fas fa-times" style="color: black"></i></button>
+            </div>
+            <div class="picture">
+                  <div class="mySlides fade">
+                    <img src="image/image1.png" style="width: 100%"/>
+                  </div>
+                  <div class="mySlides fade">
+                    <img src="image/image2.png" style="width: 100%"/>
+                  </div>
+                  <div class="mySlides fade">
+                    <img src="image/image3.jpg" style="width: 100%"/>
+                  </div>
+
+                  <a class="prev" onClick="changeSlides(-1)">&#10094;</a>
+                  <a class="next" onClick="changeSlides(1)">&#10095;</a>'
+                  <br/>
+                  
+            </div>
+           <div class="form">
+             <p id="name_product"></p>
+             <p id="price" class="price_p"></p>
+              <form method="POST" >
+                <input type="hidden" id="name_product_form"/>
+                <input type="hidden" id="price_form"/>
+                Rozmiar:
+                <div class="radio_sizes">
+                  
+                  <input type="radio" name="sizes" id="sizes_1" value="" checked onclick="sizesAddPrice('U')" />
+                  <label for="sizes_1" id="label_sizes_1"></label>
+                  <input type="radio" name="sizes" id="sizes_2" value="" onclick="sizesAddPrice('V')"/> 
+                  <label for="sizes_2" id="label_sizes_2"></label>
+                  <input type="radio" name="sizes" id="sizes_3" value="" onclick="sizesAddPrice('W')"/> 
+                  <label for="sizes_3" id="label_sizes_3"></label>
+                  <br/>
+                </div>
+               <div>
+                 Wariant:
+                 <select name="color" id="color_form" onchange="colorAddPrice(value)"> 
+                <option value="srebrny" checked >Srebrny</option>
+                <option value="czarny">Czarny</option>
+                <option value="biały">Biały</option>
+              </select>
+               </div>
+                <div class="info">
+                   <div class="is_available_class">
+                     <p id="is_available"></p>
+                   </div>
+                  <div class="information" > 
+                      Możemy wysyłać już dzisiaj!<br> Sprawdź czasy i koszty wysyłki
+                  </div>
+              </div>
+             <div class="BasketAndCount">
+                <div class="ilosc">
+                  <span class="ilosc_span">
+                    <input type="button" id="minus" value="-" onclick="ChangeValue('-')"/>
+                    <input type="number" id="ilosc_sztuk" value="1" readonly/>
+                    <input type="button" id="plus" value="+"  onclick="ChangeValue('+')"/>
+                  </span>
+               
+                </div>
+                <div class="addToBasket">
+                  <button type="submit" id ="submit">Dodaj do koszyka</button>
+                </div>
+                   
+                
+             </div>
+               
+               
+              
+              </form>
+           </div>
+          
+          </div>
+     </div>
+  </body>
+</html>
+<script src="js/popup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsonpath@1.1.1/jsonpath.min.js"></script>
+<script defer src="js/all.js"></script>

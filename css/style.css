@@ -1,0 +1,229 @@
+body { 
+    background-color:gray;
+}
+
+.popup-container {
+  
+    display: flex;
+    position: fixed;
+    align-items: center;
+    opacity: 0;
+    justify-content: center;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-left: 5px;
+}
+
+.popup-container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+.popup{
+  background-color: white;
+  border-radius: 5px;
+  border-color: #C3C7C8;
+  width: 600px;
+  max-width: 100%;
+  height: 300px;
+  text-align: center;
+  color: #333333;
+
+}
+#close  {
+    background-color: white;
+    border: 0;
+    width: 3px;
+    height: 3px;
+    right: -20px;
+    margin-right: 10px;
+}
+.close
+{
+    width: 100%;
+    text-align: right;
+}
+
+.picture {
+    width: 50%;
+    float:left;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides{
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 150px;
+    width: auto;
+    margin-top: -22px;
+    /* padding: 16px; */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    color: black;
+}
+
+.next {
+    right: 5px;
+    border-radius: 3px 0 0 3px;
+ 
+  }
+  .prev{
+     left: 20px;
+  }
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+ 
+  img {
+      width: 40px;
+      height: 200px;
+  }
+/* formularz */
+
+.form{
+    width: 50%;
+    float: right;
+    text-align: left;
+    font-size: 12px;
+}
+#name_product
+{
+    font-size: 16px;
+}
+.price_p {
+    color: #0090F6;
+    font-family: arial;
+    font-size: 14px;   
+}
+
+.radio_sizes input[type="radio"]{
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.radio_sizes label{
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-family: sans-serif, Arial;
+    font-size: 12px;
+    border: 1px solid #C3C7C8;
+    border-radius: 5px;
+}
+
+
+.radio_sizes input[type="radio"]:focus + label {
+    border: 2px solid #444;
+}
+
+.radio_sizes input[type="radio"]:checked + label {
+    /* border-color: #0090F6; */
+    border: 2px solid #0090F6;
+}
+
+select{
+    width: 95%;
+    border-color: #C3C7C8;
+    border-radius: 5px;
+    /* color: */
+}
+#is_available
+{
+    font-family: arial;
+}
+.info {
+    width: 100%;
+    height: 50px;
+}
+.information
+{
+    width:50%;
+    float:right;
+    font-size: 10px;
+    margin-top: 5px;
+}
+.is_available_class
+{
+    width:50%;
+    float: left;
+}
+.BasketAndCount {
+    width: 100%;
+    height: 70px;
+    display: inline-block ;
+}
+.ilosc{
+    width: 50%;
+    height: 70px;
+    display: inline-block ;
+}
+.ilosc_span
+{
+    width: 200px;
+
+    border: 2px solid  #C3C7C8;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px;
+}
+.ilosc input[type="button"]
+{
+    width: 30px;
+    height: 40px;
+    padding: 2px;
+    border: 0px;
+    background-color: transparent;
+}
+.ilosc input[type="number"]
+{
+    width: 30px;
+    height: 40px;
+    border: 0px;
+    margin-left:2px;
+    text-align: center;
+    background-color: transparent;
+}
+
+
+#submit
+{
+    background-color:royalblue;
+    color: white;
+    border-color: royalblue;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+
+.addToBasket
+{
+    width: 45%;
+    display: inline-block ;
+}
+
